@@ -38,12 +38,12 @@ class MiniCord():
 
 
         # Create Mini-cords UI
-        # Topbar Related Stuff
+        # Create Minicords Topbar
         TopBarFrame = tk.Frame(MiniCordUI, background='#202225',height=22)
         TopBarFrame.pack(anchor=N,fill="x", expand=True)
-        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Discord', font=('PT Sans Narrow', 12))
+        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Discord', font=('PT Sans Narrow', 10))
         TitleBar.pack(anchor=N, expand=True) 
-        TitleBar.place(relx=0.02,rely=0.1)
+        TitleBar.place(relx=0.005,rely=0.00005)
         CloseButton = tk.Label(MiniCordUI, background='#202225', foreground='white', text='✕',height=1, font=('Courier', 11))
         CloseButton.pack(anchor=N, expand=True)
         CloseButton.place(relx=0.98,rely=-0.002)
@@ -54,12 +54,16 @@ class MiniCord():
         MinimiseButton.pack(anchor=N, expand=True)
         MinimiseButton.place(relx=0.94,rely=-0.0055)
 
+        # Create Minicords Backdrop
+
+
+        
         # ─ ◻ ✕
 
         # Bind actions
-        TopBarFrame.bind("<ButtonPress-1>", lambda e: MiniCord.start_move(MiniCordUI, e))
-        TopBarFrame.bind("<ButtonRelease-1>", lambda e: MiniCord.stop_move(MiniCordUI, e))
-        TopBarFrame.bind("<B1-Motion>", lambda e: MiniCord.do_move(MiniCordUI, e))
+        TopBarFrame.bind("<ButtonPress-1>", lambda e: HandleMovement.start_move(MiniCordUI, e))
+        TopBarFrame.bind("<ButtonRelease-1>", lambda e: HandleMovement.stop_move(MiniCordUI, e))
+        TopBarFrame.bind("<B1-Motion>", lambda e: HandleMovement.do_move(MiniCordUI, e))
         CloseButton.bind("<Enter>", lambda e: CloseButton.config(background='red'))
         CloseButton.bind("<Leave>", lambda e: CloseButton.config(background='#202225'))
         CloseButton.bind("<ButtonPress-1>", lambda e: quit())
@@ -70,8 +74,9 @@ class MiniCord():
 
         MiniCordUI.mainloop()
 
-    # Handle Movement of window
 
+# Handle Movement of window
+class HandleMovement:
     def start_move(self, event):
         self.x = event.x
         self.y = event.y
