@@ -7,7 +7,6 @@ try:
     from tkinter import *
     from tkinter.ttk import *
     from tkinter import messagebox
-    import tkinter.font as TkFont
     from tkinter.font import *
     import random
     import webbrowser
@@ -17,6 +16,11 @@ except Exception as err:
 MiniCordUI = None
 Debugging = False
 SuperSecretSetting = False
+
+# Log into minicord with this
+Email = 'user@defaultemail.com'
+Password = 'password'
+# ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 class MiniCord():
 
@@ -41,7 +45,7 @@ class MiniCord():
         # Create Minicords Topbar
         TopBarFrame = tk.Frame(MiniCordUI, background='#202225',height=22)
         TopBarFrame.pack(anchor=N,fill="x", expand=True)
-        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Discord', font=('PT Sans Narrow', 10))
+        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Minicord', font=('PT Sans Narrow', 10))
         TitleBar.pack(anchor=N, expand=True) 
         TitleBar.place(relx=0.005,rely=0.00005)
         CloseButton = tk.Label(MiniCordUI, background='#202225', foreground='white', text='✕',height=1, font=('Courier', 11))
@@ -52,9 +56,12 @@ class MiniCord():
         MaximiseButton.place(relx=0.96,rely=-0.00425)
         MinimiseButton = tk.Label(MiniCordUI, background='#202225', foreground='white', text='─',height=1, font=('Courier', 13))
         MinimiseButton.pack(anchor=N, expand=True)
-        MinimiseButton.place(relx=0.94,rely=-0.0055)
+        MinimiseButton.place(relx=0.9425,rely=-0.0055)
 
         # Create Minicords Backdrop
+        BackFrame = tk.Frame(MiniCordUI , background='#292b2f',borderwidth=0, height=5000)
+        BackFrame.pack(anchor=N, fill='x', expand=True)
+
 
 
         
