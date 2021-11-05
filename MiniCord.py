@@ -7,6 +7,7 @@ try:
     from tkinter.font import *
     import random
     import webbrowser
+    from PIL import Image, ImageTk
 except Exception as err:
     tk.messagebox.showerror('Module Error', err)
 
@@ -20,6 +21,7 @@ SuperSecretSetting = False
 Email = 'user@defaultemail.com'
 Password = 'password'
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# Not even working so yh have fun
 
 class MiniCord():
 
@@ -55,12 +57,16 @@ class MiniCord():
         MinimiseButton.place(relx=0.9425,rely=-0.0055)
 
         # Create Minicords MainUI's
-        BackFrame = tk.Frame(MiniCordUI , background='#292b2f',borderwidth=0, height=5000)
+        BackFrame = tk.Frame(MiniCordUI, background='#292b2f',borderwidth=0, height=5000)
         BackFrame.pack(anchor=N, fill='x', expand=True)
         ServerList = tk.Frame(MiniCordUI, background='#202225', borderwidth=0, height=5000, width=60)
         ServerList.pack(anchor=W, fill='y', expand=True)
         ServerList.place(relx=0,rely=0)
-        #
+        #Load the home button
+        LoadHomeButton = Image.open('images/HomeButton.png')
+        # Create Home Button + template server
+        HomeButton = tk.Frame(MiniCordUI, background='#36393f',borderwidth=0, height=15, width=20)
+        HomeButton.pack(anchor=N, expand=True)
 
 
         # Patch the title last to prevent it being overlapped (too lazy to use z-index :D)
@@ -79,7 +85,7 @@ class MiniCord():
         MaximiseButton.bind("<Leave>", lambda e: MaximiseButton.config(background='#202225'))
         MinimiseButton.bind("<Enter>", lambda e: MinimiseButton.config(background='grey'))
         MinimiseButton.bind("<Leave>", lambda e: MinimiseButton.config(background='#202225'))
-
+        
         MiniCordUI.mainloop()
 
 
