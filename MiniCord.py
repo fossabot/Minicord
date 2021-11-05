@@ -45,9 +45,6 @@ class MiniCord():
         # Create Minicords Topbar
         TopBarFrame = tk.Frame(MiniCordUI, background='#202225',height=22)
         TopBarFrame.pack(anchor=N,fill="x", expand=True)
-        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Minicord', font=('PT Sans Narrow', 10))
-        TitleBar.pack(anchor=N, expand=True) 
-        TitleBar.place(relx=0.005,rely=0.00005)
         CloseButton = tk.Label(MiniCordUI, background='#202225', foreground='white', text='✕',height=1, font=('Courier', 11))
         CloseButton.pack(anchor=N, expand=True)
         CloseButton.place(relx=0.98,rely=-0.002)
@@ -58,13 +55,20 @@ class MiniCord():
         MinimiseButton.pack(anchor=N, expand=True)
         MinimiseButton.place(relx=0.9425,rely=-0.0055)
 
-        # Create Minicords Backdrop
+        # Create Minicords MainUI's
         BackFrame = tk.Frame(MiniCordUI , background='#292b2f',borderwidth=0, height=5000)
         BackFrame.pack(anchor=N, fill='x', expand=True)
+        ServerList = tk.Frame(MiniCordUI, background='#202225', borderwidth=0, height=5000, width=60)
+        ServerList.pack(anchor=W, fill='y', expand=True)
+        ServerList.place(relx=0,rely=0)
+        #
 
 
+        # Patch the title bar last to prevent clipping
+        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Minicord', font=('PT Sans Narrow', 10))
+        TitleBar.pack(anchor=N, expand=True) 
+        TitleBar.place(relx=0.0025,rely=0.00005)
 
-        
         # ─ ◻ ✕
 
         # Bind actions
@@ -107,4 +111,5 @@ MiniCord.startup()
         
 
 
-# Hii 
+# Hey how is ur day going?
+# Hope you enjoyed this lil project i made for fun :D 
