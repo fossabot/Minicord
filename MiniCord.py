@@ -64,9 +64,12 @@ class MiniCord():
         ServerList.place(relx=0,rely=0)
         #Load the home button
         LoadHomeButton = Image.open('images/HomeButton.png')
+        ResizeLoadedHomeButton = LoadHomeButton.resize((80,80), Image.ANTIALIAS)
+        RenderHomeButton = ImageTk.PhotoImage(ResizeLoadedHomeButton)
         # Create Home Button + template server
-        HomeButton = tk.Frame(MiniCordUI, background='#36393f',borderwidth=0, height=15, width=20)
+        HomeButton = tk.Label(MiniCordUI, background='#36393f',borderwidth=0, height=200, width=500, image=RenderHomeButton)
         HomeButton.pack(anchor=N, expand=True)
+        HomeButton.place(relx=0.5,rely=0.5)
 
 
         # Patch the title last to prevent it being overlapped (too lazy to use z-index :D)
