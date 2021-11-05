@@ -1,3 +1,7 @@
+from math import exp
+from os import extsep
+
+
 try:
     import math
     import tkinter as tk
@@ -75,6 +79,10 @@ class MiniCord():
         LoadCircleHover = Image.open('images/CircleHover.png')
         ResizeLoaddedCircleHover = LoadCircleHover.resize((80,80), Image.ANTIALIAS)
         RenderCircleHover = ImageTk.PhotoImage(ResizeLoaddedCircleHover)
+        #---
+        LoadHomeTag = Image.open('images/CircleHover.png')
+        ResizeLoadedHomeTag = LoadHomeTag.resize((80,80), Image.ANTIALIAS)
+        RenderHomeTag = ImageTk.PhotoImage(ResizeLoadedHomeTag)
         # Create Home Button + template server
         HomeButtonCircle = tk.Label(MiniCordUI, background='#202225', borderwidth=0, height=60, width=58, image=RenderCircle)
         HomeButtonCircle.pack(anchor=N, expand=True)
@@ -83,6 +91,10 @@ class MiniCord():
         HomeButton = tk.Label(HomeButtonCircle, background='#36393f',borderwidth=0, height=38, width=38, image=RenderHomeButton)
         HomeButton.pack(anchor=N, expand=True)
         HomeButton.place(relx=0.165,rely=0.175)
+
+        HomeTag = tk.Label(MiniCordUI, background ='#202225', borderwidth=0, height= 25, width= 50, image=RenderHomeTag)
+        HomeTag.pack(anchor=CENTER, expand=True)
+        HomeTag.place(relx=0.5,rely=0.5)
 
 
         # Patch the title last to prevent it being overlapped (too lazy to use z-index :D)
@@ -101,7 +113,7 @@ class MiniCord():
         MaximiseButton.bind("<Leave>", lambda e: MaximiseButton.config(background='#202225'))
         MinimiseButton.bind("<Enter>", lambda e: MinimiseButton.config(background='grey'))
         MinimiseButton.bind("<Leave>", lambda e: MinimiseButton.config(background='#202225'))
-        HomeButtonCircle.bind("<Enter>", lambda e: [HomeButtonCircle.config(image=RenderCircleHover), HomeButton.config(background='#5865f2')])
+        HomeButtonCircle.bind("<Enter>", lambda e: [HomeButtonCircle.config(image=RenderCircleHover), HomeButton.config(background='#5865f2'), ])
         HomeButtonCircle.bind("<Leave>", lambda e: [HomeButtonCircle.config(image=RenderCircle), HomeButton.config(background='#36393f')])
 
         
