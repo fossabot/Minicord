@@ -34,7 +34,7 @@ class MiniCord():
         MiniCordUI.resizable(True, True)
         MiniCordUI.geometry('1000x650')
 
-        # Do debugging checks
+        # Allow minicord to show window borders if debugging is toggled on
         if Debugging != False:
             MiniCordUI.overrideredirect(False)
         else:
