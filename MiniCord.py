@@ -34,6 +34,7 @@ class MiniCord():
 
         MiniCordUI.resizable(True, True)
         MiniCordUI.geometry('1000x650')
+        MiniCordUI.wm_attributes('-transparentcolor', 'orange')
 
         # Allow minicord to show window borders if debugging is toggled on
         if Debugging != False:
@@ -62,18 +63,30 @@ class MiniCord():
         ServerList = tk.Frame(MiniCordUI, background='#202225', borderwidth=0, height=5000, width=60)
         ServerList.pack(anchor=W, fill='y', expand=True)
         ServerList.place(relx=0,rely=0)
-        #Load the home button
+        #Load the home button and other stuff
         LoadHomeButton = Image.open('images/HomeButton.png')
-        ResizeLoadedHomeButton = LoadHomeButton.resize((80,80), Image.ANTIALIAS)
+        ResizeLoadedHomeButton = LoadHomeButton.resize((45,45), Image.ANTIALIAS)
         RenderHomeButton = ImageTk.PhotoImage(ResizeLoadedHomeButton)
+        #----
+        LoadCircle = Image.open('images/Circle.png')
+        ResizeLoaddedCircle = LoadCircle.resize((80,80), Image.ANTIALIAS)
+        RenderCircle = ImageTk.PhotoImage(ResizeLoaddedCircle)
+        #----
+        LoadCircleHover = Image.open('images/CircleHover.png')
+        ResizeLoaddedCircleHover = LoadCircleHover.resize((80,80), Image.ANTIALIAS)
+        RenderCircleHover = ImageTk.PhotoImage(ResizeLoaddedCircleHover)
         # Create Home Button + template server
-        HomeButton = tk.Label(MiniCordUI, background='#36393f',borderwidth=0, height=200, width=500, image=RenderHomeButton)
+        HomeButtonCircle = tk.Label(MiniCordUI, background='#202225', borderwidth=0, height=60, width=58, image=RenderCircle)
+        HomeButtonCircle.pack(anchor=N, expand=True)
+        HomeButtonCircle.place(relx=0.0005,rely=0.03)
+
+        HomeButton = tk.Label(HomeButtonCircle, background='#36393f',borderwidth=0, height=38, width=38, image=RenderHomeButton)
         HomeButton.pack(anchor=N, expand=True)
-        HomeButton.place(relx=0.5,rely=0.5)
+        HomeButton.place(relx=0.165,rely=0.175)
 
 
         # Patch the title last to prevent it being overlapped (too lazy to use z-index :D)
-        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Minicord', font=('PT Sans Narrow', 10))
+        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Discord Replica (By Preston)', font=('PT Sans Narrow', 10))
         TitleBar.pack(anchor=N, expand=True) 
         TitleBar.place(relx=0.0025,rely=0.00005)
 
@@ -88,6 +101,9 @@ class MiniCord():
         MaximiseButton.bind("<Leave>", lambda e: MaximiseButton.config(background='#202225'))
         MinimiseButton.bind("<Enter>", lambda e: MinimiseButton.config(background='grey'))
         MinimiseButton.bind("<Leave>", lambda e: MinimiseButton.config(background='#202225'))
+        HomeButtonCircle.bind("<Enter>", lambda e: [HomeButtonCircle.config(image=RenderCircleHover), HomeButton.config(background='#5865f2')])
+        HomeButtonCircle.bind("<Leave>", lambda e: [HomeButtonCircle.config(image=RenderCircle), HomeButton.config(background='#36393f')])
+
         
         MiniCordUI.mainloop()
 
@@ -108,7 +124,6 @@ class HandleMovement:
         x = self.winfo_x() + deltax
         y = self.winfo_y() + deltay
         self.geometry(f"+{x}+{y}")
-
 
 
 # Actualy start minicord smh
