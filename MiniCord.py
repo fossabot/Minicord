@@ -1,5 +1,3 @@
-from tkinter import font
-
 
 try:
     import math
@@ -16,6 +14,8 @@ except Exception as err:
 MiniCordUI = None
 Debugging = False
 SuperSecretSetting = False
+
+ # ─ ◻ ✕
 
 # Log into minicord with this
 Email = 'user@defaultemail.com'
@@ -64,12 +64,10 @@ class MiniCord():
         #
 
 
-        # Patch the title bar last to prevent clipping
+        # Patch the title last to prevent it being overlapped (too lazy to use z-index :D)
         TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Minicord', font=('PT Sans Narrow', 10))
         TitleBar.pack(anchor=N, expand=True) 
         TitleBar.place(relx=0.0025,rely=0.00005)
-
-        # ─ ◻ ✕
 
         # Bind actions
         TopBarFrame.bind("<ButtonPress-1>", lambda e: HandleMovement.start_move(MiniCordUI, e))
