@@ -13,7 +13,7 @@ except Exception as err:
 
 MiniCordUI = None
 Debugging = False
-SuperSecretSetting = False
+SuperSecretSettings = False
 
  # ─ ◻ ✕
 
@@ -139,10 +139,9 @@ class HandleMovement:
 class HandlePageSwapping:
 
     def Home(MiniCordUI):
-        SideBar = tk.Frame(MiniCordUI, background='blue', borderwidth=0, height=5000, width=200)
+        SideBar = tk.Frame(MiniCordUI, background='#2f3136', borderwidth=0, height=5000, width=200)
         SideBar.pack(anchor=W, fill='y', expand=True)
-        SideBar.place(rely=0.5,relx=0.2)
-        print('Should created')
+        SideBar.place(rely=0.0333,relx=0.06)
 
 # Actualy start minicord smh
 MiniCord.startup()
