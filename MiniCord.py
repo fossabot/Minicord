@@ -1,7 +1,3 @@
-from math import exp
-from os import extsep
-
-
 try:
     import math
     import tkinter as tk
@@ -143,7 +139,10 @@ class HandleMovement:
 class HandlePageSwapping:
 
     def Home(MiniCordUI):
-        print(MiniCordUI)
+        SideBar = tk.Frame(MiniCordUI, background='blue', borderwidth=0, height=5000, width=200)
+        SideBar.pack(anchor=W, fill='y', expand=True)
+        SideBar.place(rely=0.5,relx=0.2)
+        print('Should created')
 
 # Actualy start minicord smh
 MiniCord.startup()
