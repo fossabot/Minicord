@@ -80,8 +80,8 @@ class MiniCord():
         ResizeLoaddedCircleHover = LoadCircleHover.resize((80,80), Image.ANTIALIAS)
         RenderCircleHover = ImageTk.PhotoImage(ResizeLoaddedCircleHover)
         #---
-        LoadHomeTag = Image.open('images/CircleHover.png')
-        ResizeLoadedHomeTag = LoadHomeTag.resize((80,80), Image.ANTIALIAS)
+        LoadHomeTag = Image.open('images/HomeTag.png')
+        ResizeLoadedHomeTag = LoadHomeTag.resize((90,50), Image.ANTIALIAS)
         RenderHomeTag = ImageTk.PhotoImage(ResizeLoadedHomeTag)
         # Create Home Button + template server
         HomeButtonCircle = tk.Label(MiniCordUI, background='#202225', borderwidth=0, height=60, width=58, image=RenderCircle)
@@ -92,9 +92,9 @@ class MiniCord():
         HomeButton.pack(anchor=N, expand=True)
         HomeButton.place(relx=0.165,rely=0.175)
 
-        HomeTag = tk.Label(MiniCordUI, background ='#202225', borderwidth=0, height= 25, width= 50, image=RenderHomeTag)
+        HomeTag = tk.Label(MiniCordUI, background ='#292b2f', borderwidth=0, height=45, width=72, image=RenderHomeTag)
         HomeTag.pack(anchor=CENTER, expand=True)
-        HomeTag.place(relx=0.5,rely=0.5)
+        HomeTag.place(relx=9,rely=9)
 
 
         # Patch the title last to prevent it being overlapped (too lazy to use z-index :D)
@@ -113,10 +113,11 @@ class MiniCord():
         MaximiseButton.bind("<Leave>", lambda e: MaximiseButton.config(background='#202225'))
         MinimiseButton.bind("<Enter>", lambda e: MinimiseButton.config(background='grey'))
         MinimiseButton.bind("<Leave>", lambda e: MinimiseButton.config(background='#202225'))
-        HomeButtonCircle.bind("<Enter>", lambda e: [HomeButtonCircle.config(image=RenderCircleHover), HomeButton.config(background='#5865f2'), ])
-        HomeButtonCircle.bind("<Leave>", lambda e: [HomeButtonCircle.config(image=RenderCircle), HomeButton.config(background='#36393f')])
+        HomeButtonCircle.bind("<Enter>", lambda e: [HomeButtonCircle.config(image=RenderCircleHover), HomeButton.config(background='#5865f2'), HomeTag.place(relx=0.065,rely=0.0385)])
+        HomeButtonCircle.bind("<Leave>", lambda e: [HomeButtonCircle.config(image=RenderCircle), HomeButton.config(background='#36393f'), HomeTag.place(relx=9,rely=9)])
 
-        
+        HandlePageSwapping.Home(MiniCordUI)
+
         MiniCordUI.mainloop()
 
 
@@ -137,6 +138,12 @@ class HandleMovement:
         y = self.winfo_y() + deltay
         self.geometry(f"+{x}+{y}")
 
+
+# Handle Page Swapping
+class HandlePageSwapping:
+
+    def Home(MiniCordUI):
+        print(MiniCordUI)
 
 # Actualy start minicord smh
 MiniCord.startup()
