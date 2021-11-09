@@ -143,6 +143,7 @@ class HandlePageSwapping:
         SideBar.pack(anchor=W, fill='y', expand=True)
         SideBar.place(rely=0.0333,relx=0.06)
 
+
 # Actualy start minicord smh
 MiniCord.startup()
 
