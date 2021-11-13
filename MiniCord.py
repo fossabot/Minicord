@@ -23,6 +23,10 @@ Password = 'password'
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Not even working so yh have fun
 
+default1 = '#202225'
+default2 = '#292b2f'
+default3 = '#36393f'
+
 class MiniCord():
 
     def startup():
@@ -34,7 +38,6 @@ class MiniCord():
 
         MiniCordUI.resizable(True, True)
         MiniCordUI.geometry('1000x650')
-        MiniCordUI.wm_attributes('-transparentcolor', 'orange')
 
         # Allow minicord to show window borders if debugging is toggled on
         if Debugging != False:
@@ -45,22 +48,22 @@ class MiniCord():
 
         # Create Mini-cords UI
         # Create Minicords Topbar
-        TopBarFrame = tk.Frame(MiniCordUI, background='#202225',height=22)
+        TopBarFrame = tk.Frame(MiniCordUI, background=default1,height=22)
         TopBarFrame.pack(anchor=N,fill="x", expand=True)
-        CloseButton = tk.Label(MiniCordUI, background='#202225', foreground='white', text='✕',height=1, font=('Courier', 11))
+        CloseButton = tk.Label(MiniCordUI, background=default1, foreground='white', text='✕',height=1, font=('Courier', 11))
         CloseButton.pack(anchor=N, expand=True)
         CloseButton.place(relx=0.98,rely=-0.002)
-        MaximiseButton = tk.Label(MiniCordUI, background='#202225', foreground='white', text='◻',height=1, font=('Courier', 13))
+        MaximiseButton = tk.Label(MiniCordUI, background=default1, foreground='white', text='◻',height=1, font=('Courier', 13))
         MaximiseButton.pack(anchor=N, expand=True)
         MaximiseButton.place(relx=0.96,rely=-0.00425)
-        MinimiseButton = tk.Label(MiniCordUI, background='#202225', foreground='white', text='─',height=1, font=('Courier', 13))
+        MinimiseButton = tk.Label(MiniCordUI, background=default1, foreground='white', text='─',height=1, font=('Courier', 13))
         MinimiseButton.pack(anchor=N, expand=True)
         MinimiseButton.place(relx=0.9425,rely=-0.0055)
 
         # Create Minicords MainUI's
-        BackFrame = tk.Frame(MiniCordUI, background='#292b2f',borderwidth=0, height=5000)
+        BackFrame = tk.Frame(MiniCordUI, background=default2,borderwidth=0, height=5000)
         BackFrame.pack(anchor=N, fill='x', expand=True)
-        ServerList = tk.Frame(MiniCordUI, background='#202225', borderwidth=0, height=5000, width=60)
+        ServerList = tk.Frame(MiniCordUI, background=default1, borderwidth=0, height=5000, width=60)
         ServerList.pack(anchor=W, fill='y', expand=True)
         ServerList.place(relx=0,rely=0)
         #Load the home button and other stuff
@@ -80,21 +83,21 @@ class MiniCord():
         ResizeLoadedHomeTag = LoadHomeTag.resize((90,50), Image.ANTIALIAS)
         RenderHomeTag = ImageTk.PhotoImage(ResizeLoadedHomeTag)
         # Create Home Button + template server
-        HomeButtonCircle = tk.Label(MiniCordUI, background='#202225', borderwidth=0, height=60, width=58, image=RenderCircle)
+        HomeButtonCircle = tk.Label(MiniCordUI, background=default1, borderwidth=0, height=60, width=58, image=RenderCircle)
         HomeButtonCircle.pack(anchor=N, expand=True)
         HomeButtonCircle.place(relx=0.0005,rely=0.03)
 
-        HomeButton = tk.Label(HomeButtonCircle, background='#36393f',borderwidth=0, height=38, width=38, image=RenderHomeButton)
+        HomeButton = tk.Label(HomeButtonCircle, background=default3,borderwidth=0, height=38, width=38, image=RenderHomeButton)
         HomeButton.pack(anchor=N, expand=True)
         HomeButton.place(relx=0.165,rely=0.175)
 
-        HomeTag = tk.Label(MiniCordUI, background ='#292b2f', borderwidth=0, height=45, width=72, image=RenderHomeTag)
+        HomeTag = tk.Label(MiniCordUI, background =default2, borderwidth=0, height=45, width=72, image=RenderHomeTag)
         HomeTag.pack(anchor=CENTER, expand=True)
         HomeTag.place(relx=9,rely=9)
 
 
         # Patch the title last to prevent it being overlapped (too lazy to use z-index :D)
-        TitleBar = tk.Label(MiniCordUI, background='#202225', height= 1, foreground='grey',text='Discord Replica (By Preston)', font=('PT Sans Narrow', 10))
+        TitleBar = tk.Label(MiniCordUI, background=default1, height= 1, foreground='grey',text='Discord Replica (By Preston)', font=('PT Sans Narrow', 10))
         TitleBar.pack(anchor=N, expand=True) 
         TitleBar.place(relx=0.0025,rely=0.00005)
 
@@ -103,14 +106,14 @@ class MiniCord():
         TopBarFrame.bind("<ButtonRelease-1>", lambda e: HandleMovement.stop_move(MiniCordUI, e))
         TopBarFrame.bind("<B1-Motion>", lambda e: HandleMovement.do_move(MiniCordUI, e))
         CloseButton.bind("<Enter>", lambda e: CloseButton.config(background='red'))
-        CloseButton.bind("<Leave>", lambda e: CloseButton.config(background='#202225'))
+        CloseButton.bind("<Leave>", lambda e: CloseButton.config(background=default1))
         CloseButton.bind("<ButtonPress-1>", lambda e: quit())
         MaximiseButton.bind("<Enter>", lambda e: MaximiseButton.config(background='grey'))
-        MaximiseButton.bind("<Leave>", lambda e: MaximiseButton.config(background='#202225'))
+        MaximiseButton.bind("<Leave>", lambda e: MaximiseButton.config(background=default1))
         MinimiseButton.bind("<Enter>", lambda e: MinimiseButton.config(background='grey'))
-        MinimiseButton.bind("<Leave>", lambda e: MinimiseButton.config(background='#202225'))
+        MinimiseButton.bind("<Leave>", lambda e: MinimiseButton.config(background=default1))
         HomeButtonCircle.bind("<Enter>", lambda e: [HomeButtonCircle.config(image=RenderCircleHover), HomeButton.config(background='#5865f2'), HomeTag.place(relx=0.065,rely=0.0385)])
-        HomeButtonCircle.bind("<Leave>", lambda e: [HomeButtonCircle.config(image=RenderCircle), HomeButton.config(background='#36393f'), HomeTag.place(relx=9,rely=9)])
+        HomeButtonCircle.bind("<Leave>", lambda e: [HomeButtonCircle.config(image=RenderCircle), HomeButton.config(background=default3), HomeTag.place(relx=9,rely=9)])
 
         HandlePageSwapping.Home(MiniCordUI)
 
