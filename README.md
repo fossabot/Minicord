@@ -33,13 +33,13 @@ Description.apply(True, 1)
 # Patched should have worked
 ```
 
-| Command | Description | Required |
-| ------- | ----------- | -------- |
-| Name | Configs the default server name | Yes | 
-| Description | Configs the default server about me | No |
-| Icon | Configs the default server icon | No |
-| Everyoneperm | Configs everyones perms | Yes |
-| Rolecolor | Configs the role color #hex | No |
+| Command | Description |
+| ------- | ----------- |
+| Name | Configs the default server name |
+| Description | Configs the default server about me |
+| Icon | Configs the default server icon |
+| Everyoneperm | Configs everyones perms |
+| Rolecolor | Configs the role color #hex |
 
 Please create a *Issue* Request If you recieve any errors.
 
