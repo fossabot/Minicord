@@ -1,6 +1,6 @@
 # What is Minicord?
 > Minicord is a open source replica of discord. I originally started working on this as I was bored at home one time. This is completely free to take and to work on. 
-> Minicord as complete customization from top to bottom coming to creating servers and customizing them via the console.
+> Minicord has complete customization from top to bottom coming to creating servers and customizing them via the console.
 
 ## Me and my friend have Minicord how do I add them?
 > tl;dr the answer is you cant
