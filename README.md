@@ -33,7 +33,7 @@ Description.apply(True, 1)
 # Patched should have worked
 ```
 | Command | Description | Required |
-| --- | --- | --- |
+| ------- | ----------- | -------- |
 | Name | Configs the default server name | Yes | 
 | Description | Configs the default server about me | No |
 | Icon | Configs the default server icon | No |
