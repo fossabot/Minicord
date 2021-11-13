@@ -32,6 +32,7 @@ Name.apply(True, True)
 Description.apply(True, 1)
 # Patched should have worked
 ```
+
 | Command | Description | Required |
 | ------- | ----------- | -------- |
 | Name | Configs the default server name | Yes | 
