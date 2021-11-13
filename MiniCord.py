@@ -27,6 +27,8 @@ default1 = '#202225'
 default2 = '#292b2f'
 default3 = '#36393f'
 
+TitleText = 'Minicord'
+
 class MiniCord():
 
     def startup():
@@ -97,7 +99,7 @@ class MiniCord():
 
 
         # Patch the title last to prevent it being overlapped (too lazy to use z-index :D)
-        TitleBar = tk.Label(MiniCordUI, background=default1, height= 1, foreground='grey',text='Discord Replica (By Preston)', font=('PT Sans Narrow', 10))
+        TitleBar = tk.Label(MiniCordUI, background=default1, height= 1, foreground='grey',text=TitleText, font=('PT Sans Narrow', 10))
         TitleBar.pack(anchor=N, expand=True) 
         TitleBar.place(relx=0.0025,rely=0.00005)
 
