@@ -2,18 +2,6 @@
 > Minicord is a open source replica of discord. I originally started working on this as I was bored at home one time. This is completely free to take and to work on. 
 > Minicord as complete customization from top to bottom coming to creating servers and customizing them via the console.
 
-## How do I create my own server on Minicord?
-> The only current way to create your own server is:
-```python
-create_server(MiniCordUI, True, 'Name', 'Description')
-Name.config('Minicord Server.')
-Description.config('Minicord Description.')
-Name.apply(True, True)
-Description.apply(True, 1)
-# Patched should have worked
-```
-Please create a *Issue* Request If you recieve any errors.
-
 ## Me and my friend have Minicord how do I add them?
 > tl;dr the answer is you cant
 
@@ -34,6 +22,43 @@ I mean if you got a offer... **hmu**
 
 # Extra
 
-## Nothing here yet <3
-> Nothing here yet <3
+## How do I create my own server on Minicord?
+> The only current way to create your own server is:
+```python
+create_server(MiniCordUI, True, 'Name', 'Description')
+Name.config('Minicord Server.')
+Description.config('Minicord Description.')
+Name.apply(True, True)
+Description.apply(True, 1)
+# Patched should have worked
+```
+| Command | Description | Required |
+| --- | --- | --- |
+| Name | Configs the default server name | Yes | 
+| Description | Configs the default server about me | No |
+| Icon | Configs the default server icon | No |
+| Everyoneperm | Configs everyones perms | Yes |
+| Rolecolor | Configs the role color #hex | No |
+
+Please create a *Issue* Request If you recieve any errors.
+
+## How do I customize the Minicord default colors?
+```python
+Reconfig.colors(default1, 'blue')
+Reconfig.colors(default2, 'orange')
+Reconfig.colors(default3, default)
+```
+**This will be the outcome**
+![image](https://user-images.githubusercontent.com/80045521/141642155-8fcfec60-2d5f-4f74-a53a-5147c72052ed.png)
+> It doesn't look nice but what ever floats your boat.
+
+## How do I change the message at the top left?
+```python
+TitleText = 'whatever'
+reload()
+```
+> Change "whatever" with anything you wish.
+
+
+
 
