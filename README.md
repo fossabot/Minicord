@@ -24,6 +24,7 @@ I mean if you got a offer... **hmu**
 
 ## How do I create my own server on Minicord?
 > The only current way to create your own server is:
+
 ```python
 create_server(MiniCordUI, True, 'Name', 'Description')
 Name.config('Minicord Server.')
