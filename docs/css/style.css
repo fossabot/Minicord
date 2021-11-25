@@ -60,7 +60,7 @@ p {
 }
 
 .name {
-    width: 70%;
+    width: 100%;
 }
 
 .text {
@@ -84,7 +84,7 @@ p {
   font-family: roboto;
   /* color: #429bf4; */
   color: #32CD32;
-  font-size: 1.2em;
+  font-size: 1em;
   content: "k";
   /*any letter of your choice but for kaggle "k"*/
 }
@@ -100,7 +100,7 @@ p {
 .stack-overflow,
 .quora,
 .kaggle {
-    color: #32CD32;
+    color: #e61313;
 }
 
 .ico {
@@ -172,7 +172,7 @@ p {
 
 @media screen and (max-width: 700px) {
     .name {
-        width: 100%;
+        width: 0%;
     }
     .head {
         font-size: 13vw;
@@ -244,3 +244,4 @@ p {
 .quora {
     margin-left: -2px;
 }
+
