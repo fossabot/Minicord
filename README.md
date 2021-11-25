@@ -51,6 +51,7 @@ Reconfig.colors(default3, default)
 ```
 **This will be the outcome**
 ![image](https://user-images.githubusercontent.com/80045521/141642155-8fcfec60-2d5f-4f74-a53a-5147c72052ed.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBxl0c%2FMinicord.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FBxl0c%2FMinicord?ref=badge_shield)
 > It doesn't look nice but what ever floats your boat.
 
 ## How do I change the message at the top left?
@@ -63,3 +64,7 @@ reload()
 
 
 
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBxl0c%2FMinicord.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FBxl0c%2FMinicord?ref=badge_large)
