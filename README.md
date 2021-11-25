@@ -1,18 +1,6 @@
 # What is Minicord?
 > Minicord is a open source replica of discord. I originally started working on this as I was bored at home one time. This is completely free to take and to work on. 
-> Minicord as complete customization from top to bottom coming to creating servers and customizing them via the console.
-
-## How do I create my own server on Minicord?
-> The only current way to create your own server is:
-```python
-create_server(MiniCordUI, True, 'Name', 'Description')
-Name.config('Minicord Server.')
-Description.config('Minicord Description.')
-Name.apply(True, True)
-Description.apply(True, 1)
-# Patched should have worked
-```
-Please create a *Issue* Request If you recieve any errors.
+> Minicord has complete customization from top to bottom coming to creating servers and customizing them via the console.
 
 ## Me and my friend have Minicord how do I add them?
 > tl;dr the answer is you cant
@@ -34,6 +22,49 @@ I mean if you got a offer... **hmu**
 
 # Extra
 
-## Nothing here yet <3
-> Nothing here yet <3
+## How do I create my own server on Minicord?
+**The only current way to create your own server is:**
+```python
+create_server(MiniCordUI, True, 'Name', 'Description')
+Name.config('Minicord Server.')
+Description.config('Minicord Description.')
+Name.apply(True, True)
+Description.apply(True, 1)
+# Patched should have worked
+```
 
+| Command | Description |
+| ------- | ----------- |
+| Name | Configs the default server name |
+| Description | Configs the default server about me |
+| Icon | Configs the default server icon |
+| Everyoneperm | Configs everyones perms |
+| Rolecolor | Configs the role color #hex |
+
+Please create a *Issue* Request If you recieve any errors.
+
+## How do I customize the Minicord default colors?
+```python
+Reconfig.colors(default1, 'blue')
+Reconfig.colors(default2, 'orange')
+Reconfig.colors(default3, default)
+```
+**This will be the outcome**
+![image](https://user-images.githubusercontent.com/80045521/141642155-8fcfec60-2d5f-4f74-a53a-5147c72052ed.png)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBxl0c%2FMinicord.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2FBxl0c%2FMinicord?ref=badge_shield)
+> It doesn't look nice but what ever floats your boat.
+
+## How do I change the message at the top left?
+```python
+TitleText = 'whatever'
+reload()
+```
+> Change "whatever" with anything you wish.
+
+
+
+
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2FBxl0c%2FMinicord.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2FBxl0c%2FMinicord?ref=badge_large)
