@@ -34,17 +34,12 @@ body {
   background-position: 50% 50%;*/
 }
 
-.head {
-    color: #32CD32;
-    /*font-family: 'Karla', sans-serif;*/
-    font-family: 'Lustria', serif;
-    font-family: 'Raleway', sans-serif;
-    /*font-family: 'Roboto', sans-serif;*/
-    /*font-family: 'Montserrat', sans-serif;*/
-    font-size: 7vw;
-    font-weight: 600;
-    line-height: 20px;
-    margin-bottom: 40px;
+.title-text {
+    position: absolute;
+    transform: translateY(0%);
+    height: 100px;
+    width: 100px;
+    color: #ffffff;
 }
 
 p {
