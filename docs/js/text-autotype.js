@@ -50,3 +50,4 @@ function ret_index(a){
 
 
 setInterval(txt,170);
+
