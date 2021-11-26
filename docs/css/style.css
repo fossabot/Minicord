@@ -13,7 +13,8 @@ body {
 }
 
 .topbar-main {
-    position: absolute;
+    position: sticky;
+    transform: translateX(0%);
     transform: translateY(0%);
     height: 50px;
     width: 100%;
@@ -34,12 +35,11 @@ body {
   background-position: 50% 50%;*/
 }
 
-.title-text {
-    position: absolute;
-    transform: translateY(0%);
-    height: 100px;
-    width: 100px;
-    color: #ffffff;
+.logo-main {
+    height: 200%;
+    width: 150px;
+    transform: translateY(-25%) translateX(25%);
+
 }
 
 p {
