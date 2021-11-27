@@ -20,30 +20,18 @@ body {
     width: 100%;
     background-color: #7289DA;
 }
-/* ---- particles.js container ---- */
 
-#particles-js {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    z-index: -20;
-    background-color: #182327;
-    /*background: linear-gradient(#000000,#191919);*/
-    /*background-image: url("");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50% 50%;*/
-}
 
 .logo-main {
     height: 200%;
     width: 150px;
-    transform: translateY(-25%) translateX(25%);
+    transform: translateY(-25%) translateX(40%);
 
 }
-
-p {
-    display: inline-block !important;
+.logo-menu {
+    height: 50px;
+    width: 50px;
+    transform: translateY(-96%) translateX(-285%) rotate(0deg);
 }
 
 .section {
