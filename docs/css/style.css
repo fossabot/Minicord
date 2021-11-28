@@ -2,13 +2,13 @@
     --Blurple-Main: #7289DA;
     --Background-Primary: #23272A;
     --Background-Secondary: #313639;
+    --button-color: #6166dd;
 }
 
 body {
     margin: 0;
     font: normal 75% Arial, Helvetica, sans-serif;
     size: 5px;
-    background-color: var(--Background-Primary);
 }
 
 .wrapper {
@@ -22,7 +22,7 @@ body {
     transform: translateY(0%);
     height: 50px;
     width: 100%;
-    background-color:transparent;
+    background-color: transparent;
 }
 
 
@@ -38,10 +38,21 @@ body {
     transform: translateY(-135%) translateX(-340%) rotate(0deg);
 }
 
+.links-top {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    text-align: center;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 600;
+}
+
 .Minicord-info1 {
     width: 100%;
     background-color: orange;
 }
+
 
 .section {
     /*height: calc(100vh - 40px);*/
@@ -144,15 +155,6 @@ body {
     transform: translateY(-4px);
 }
 
-.fa:hover {
-    color: white;
-}
-
-.fa-kaggle:hover:before{
-  color: white;
-}
-
-
 
 #bar {
     position: fixed;
@@ -169,79 +171,3 @@ body {
     width: 10%;
     float: left;
 }
-
-@media screen and (max-width: 700px) {
-    .name {
-        width: 0%;
-    }
-    .head {
-        font-size: 1vw;
-        margin-bottom: 0px !important;
-        padding: 0 !important;
-    }
-    .text {
-        font-size: 4vw;
-        margin-bottom: 4px !important;
-        margin-top: 5px !important;
-    }
-    .ico {
-        border: 4px double white;
-        border-radius: 50%;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        padding: 5px !important;
-        position: relative;
-        background: transparent;
-        transition: all 0.2s ease;
-        text-decoration: none;
-        margin: 0px 3px !important;
-    }
-    .icons {
-        margin-bottom: 8px;
-    }
-    .ico-res {
-        border: 4px double white;
-        border-radius: 50%;
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        padding: 10px 8px 8px 8px !important;
-        position: relative;
-        background: transparent;
-        transition: all 0.2s ease;
-        text-decoration: none;
-        margin: 0px 8px !important;
-    }
-    .fa-2x {
-        font-size: 1.5em !important;
-    }
-    .fa-3x {
-        font-size: 2em !important;
-    }
-    ul {
-        padding: 0px !important;
-    }
-}
-
-.fcc {
-    margin-left: -6px;
-}
-
-.medium {
-    margin-left: -2px;
-}
-
-.stack-overflow {
-    margin-right: 2px;
-    margin-top: -2px
-}
-
-.mail {
-    margin-left: -2px
-}
-
-.quora {
-    margin-left: -2px;
-}
-
