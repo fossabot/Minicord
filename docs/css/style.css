@@ -1,10 +1,14 @@
-/* ---- reset ---- */
+:root {
+    --Blurple-Main: #7289DA;
+    --Background-Primary: #23272A;
+    --Background-Secondary: #313639;
+}
 
 body {
     margin: 0;
     font: normal 75% Arial, Helvetica, sans-serif;
     size: 5px;
-    background-color: #23272A;
+    background-color: var(--Background-Primary);
 }
 
 .wrapper {
@@ -18,7 +22,7 @@ body {
     transform: translateY(0%);
     height: 50px;
     width: 100%;
-    background-color: #7289DA;
+    background-color:transparent;
 }
 
 
@@ -29,9 +33,14 @@ body {
 
 }
 .logo-menu {
-    height: 50px;
-    width: 50px;
-    transform: translateY(-96%) translateX(-285%) rotate(0deg);
+    height: 40px;
+    width: 40px;
+    transform: translateY(-135%) translateX(-340%) rotate(0deg);
+}
+
+.Minicord-info1 {
+    width: 100%;
+    background-color: orange;
 }
 
 .section {
