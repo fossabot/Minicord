@@ -154,7 +154,7 @@ MiniCord.startup()
 
         
 
-
+# v0
 # Hey how is ur day going?
 # Hope you enjoyed this lil project i made for fun :D 
 # yes pogger
