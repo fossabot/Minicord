@@ -22,7 +22,6 @@ Email = 'user@defaultemail.com'
 Password = 'password'
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 # Not even working so yh have fun
-# Patch 0.0.4 Key
 
 default1 = '#202225'
 default2 = '#292b2f'
